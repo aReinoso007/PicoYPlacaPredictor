@@ -11,6 +11,6 @@ public interface IPicoPlaca {
 	
 	List<PicoPlaca> generatePicoPlacaRules(DayEnums[] days, Schedule morningSchedule, Schedule noonSchedule);;
 	
-	String[] assignDigitsToDays(DayEnums day);
+	
 	
 }
