@@ -7,7 +7,6 @@ public class Query {
 	private String numberPlate;
 	private String fecha;
 	private String hora;
-	private Boolean estado;
 	
 	public Query(String numberPlate, String fecha, String hora) {
 		super();
@@ -40,17 +39,10 @@ public class Query {
 		this.hora = hora;
 	}
 
-	public Boolean getEstado() {
-		return estado;
-	}
-
-	public void setEstado(Boolean estado) {
-		this.estado = estado;
-	}
 
 	@Override
 	public String toString() {
-		return "Query [numberPlate=" + numberPlate + ", fecha=" + fecha + ", hora=" + hora + ", estado=" + estado + "]";
+		return "Query [numberPlate=" + numberPlate + ", fecha=" + fecha + ", hora=" + hora + "]";
 	}
 	
 	
