@@ -4,22 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.stackbuilders.entity.PicoPlaca;
-import com.stackbuilders.entity.Schedule;
 import com.stackbuilders.iservice.IPicoPlaca;
 import com.stackbuilders.iservice.ISchedule;
 import com.stackbuilders.utils.DayEnums;
 
 public class PicoPlacaService implements IPicoPlaca{
 	
+	private ISchedule scheduleService;
 	
-	private final ISchedule scheduleService;
 	
 	public PicoPlacaService(ISchedule scheduleService) {
 		this.scheduleService = scheduleService;
 	}
 
 	@Override
-	public List<PicoPlaca> generatePicoPlacaRules(Schedule morningSchedule, Schedule noonSchedule) {
+	public List<PicoPlaca> generatePicoPlacaRules() {
 		List<PicoPlaca> scheduledRules = new ArrayList<PicoPlaca>();
 		
 		scheduledRules.add(new PicoPlaca(DayEnums.MON, scheduleService.generateMorningHourRange(), scheduleService.generateNoonHourRange(), new String[]{"1","2"}));

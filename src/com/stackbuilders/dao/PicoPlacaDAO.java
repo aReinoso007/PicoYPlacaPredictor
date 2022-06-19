@@ -1,16 +1,11 @@
-package com.stackbuilders.iservice;
-
+package com.stackbuilders.dao;
 
 import java.util.List;
 
 import com.stackbuilders.entity.PicoPlaca;
-import com.stackbuilders.entity.Schedule;
 
-
-public interface IPicoPlaca {
+public interface PicoPlacaDAO extends GenericDAO<PicoPlaca, Integer>{
 	
 	List<PicoPlaca> generatePicoPlacaRules();
-	
-	
 	
 }
