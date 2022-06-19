@@ -31,6 +31,5 @@ public enum DayEnums {
 		this.dayName = dayName;
 	}
 	
-	
 
 }

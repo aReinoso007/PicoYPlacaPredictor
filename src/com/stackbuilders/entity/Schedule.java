@@ -1,16 +1,20 @@
 package com.stackbuilders.entity;
 
+import java.util.Calendar;
+
 public class Schedule {
 	
 	private int id;
-	private String day;
-	private String startHour;
-	private String endHour;
+	private Calendar startHour;
+	private Calendar endHour;
 	
-	public Schedule(int id, String day, String startHour, String endHour) {
+	public Schedule() {
+		super();
+	}
+
+	public Schedule(int id, Calendar startHour, Calendar endHour) {
 		super();
 		this.id = id;
-		this.day = day;
 		this.startHour = startHour;
 		this.endHour = endHour;
 	}
@@ -23,30 +27,20 @@ public class Schedule {
 		this.id = id;
 	}
 
-	public String getDay() {
-		return day;
-	}
-
-	public void setDay(String day) {
-		this.day = day;
-	}
-
-	public String getStartHour() {
+	public Calendar getStartHour() {
 		return startHour;
 	}
 
-	public void setStartHour(String startHour) {
+	public void setStartHour(Calendar startHour) {
 		this.startHour = startHour;
 	}
 
-	public String getEndHour() {
+	public Calendar getEndHour() {
 		return endHour;
 	}
 
-	public void setEndHour(String endHour) {
+	public void setEndHour(Calendar endHour) {
 		this.endHour = endHour;
 	}
-	
-	
 	
 }

@@ -1,12 +1,14 @@
 package com.stackbuilders.iservice;
 
+import java.util.Calendar;
+
 import com.stackbuilders.entity.PicoPlaca;
 import com.stackbuilders.entity.Schedule;
+import com.stackbuilders.utils.DayEnums;
 
 public interface ISchedule {
 	
-	Boolean checkScheduleFormat(String day, String start, String[] endNumbers);
-	
-	
+	Calendar generateMorningHourRange();
+	Calendar generateNoonHourRange();
 	
 }
