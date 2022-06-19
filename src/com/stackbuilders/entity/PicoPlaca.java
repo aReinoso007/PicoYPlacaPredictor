@@ -4,28 +4,19 @@ import com.stackbuilders.utils.DayEnums;
 
 public class PicoPlaca {
 	
-	private int id;
 	private DayEnums day;
 	private Schedule morningSchedule;
 	private Schedule noonSchedule;
 	private String[] lastDigits;
 	
-	public PicoPlaca(int id, DayEnums day, Schedule morningSchedule, Schedule noonSchedule, String[] lastDigits) {
+	public PicoPlaca(DayEnums day, Schedule morningSchedule, Schedule noonSchedule, String[] lastDigits) {
 		super();
-		this.id = id;
 		this.day = day;
 		this.morningSchedule = morningSchedule;
 		this.noonSchedule = noonSchedule;
 		this.lastDigits = lastDigits;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public DayEnums getDay() {
 		return day;
