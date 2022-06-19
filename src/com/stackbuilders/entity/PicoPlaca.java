@@ -2,13 +2,13 @@ package com.stackbuilders.entity;
 
 import java.time.LocalDateTime;
 
-public class Query {
+public class PicoPlaca {
 	
 	private String numberPlate;
 	private String fecha;
 	private String hora;
 	
-	public Query(String numberPlate, String fecha, String hora) {
+	public PicoPlaca(String numberPlate, String fecha, String hora) {
 		super();
 		this.numberPlate = numberPlate;
 		this.fecha = fecha;

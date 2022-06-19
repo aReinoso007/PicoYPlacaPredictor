@@ -1,5 +1,5 @@
 package com.stackbuilders.service;
 
-public class HorarioService {
+public class ScheduleService {
 
 }
