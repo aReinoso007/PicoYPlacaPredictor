@@ -19,7 +19,7 @@ public class PicoPlacaService implements IPicoPlaca{
 	}
 
 	@Override
-	public List<PicoPlaca> generatePicoPlacaRules(DayEnums[] days, Schedule morningSchedule, Schedule noonSchedule) {
+	public List<PicoPlaca> generatePicoPlacaRules(Schedule morningSchedule, Schedule noonSchedule) {
 		List<PicoPlaca> scheduledRules = new ArrayList<PicoPlaca>();
 		
 		scheduledRules.add(new PicoPlaca(DayEnums.MON, scheduleService.generateMorningHourRange(), scheduleService.generateNoonHourRange(), new String[]{"1","2"}));

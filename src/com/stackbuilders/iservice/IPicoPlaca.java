@@ -9,7 +9,7 @@ import com.stackbuilders.utils.DayEnums;
 
 public interface IPicoPlaca {
 	
-	List<PicoPlaca> generatePicoPlacaRules(DayEnums[] days, Schedule morningSchedule, Schedule noonSchedule);;
+	List<PicoPlaca> generatePicoPlacaRules(Schedule morningSchedule, Schedule noonSchedule);;
 	
 	
 	
