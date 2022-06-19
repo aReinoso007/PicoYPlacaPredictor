@@ -2,10 +2,10 @@ package com.stackbuilders.service;
 
 import java.util.Calendar;
 
+import com.stackbuilders.dao.ScheduleDAO;
 import com.stackbuilders.entity.Schedule;
-import com.stackbuilders.iservice.ISchedule;
 
-public class ScheduleService implements ISchedule{
+public class ScheduleService implements ScheduleDAO{
 
 	@Override
 	public Schedule generateMorningHourRange() {

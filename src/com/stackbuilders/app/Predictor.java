@@ -10,9 +10,7 @@ public class Predictor {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		PicoPlacaService picoService= null;
-		ScheduleService scheduleService = null;
-		picoService = new PicoPlacaService(scheduleService);
+	
 			
 		
 	}
