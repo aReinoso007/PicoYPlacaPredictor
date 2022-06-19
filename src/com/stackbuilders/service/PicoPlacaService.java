@@ -6,21 +6,24 @@ import java.util.List;
 import com.stackbuilders.entity.PicoPlaca;
 import com.stackbuilders.entity.Schedule;
 import com.stackbuilders.iservice.IPicoPlaca;
+import com.stackbuilders.utils.DayEnums;
 
 public class PicoPlacaService implements IPicoPlaca{
 
-
 	@Override
-	public String verifyPicoPlaca(PicoPlaca picoPlaca, Schedule schedule, List<Schedule> rules) {
+	public List<PicoPlaca> generatePicoPlacaRules(DayEnums[] days, Schedule morningSchedule, Schedule noonSchedule) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<LocalDateTime> generateNextAvailableDates(PicoPlaca picoPlaca) {
+	public String[] assignDigitsToDays(DayEnums day) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
+	
 	
 	
 }

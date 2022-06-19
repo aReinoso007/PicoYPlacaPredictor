@@ -1,15 +1,16 @@
 package com.stackbuilders.iservice;
 
-import java.time.LocalDateTime;
+
 import java.util.List;
 
 import com.stackbuilders.entity.PicoPlaca;
 import com.stackbuilders.entity.Schedule;
+import com.stackbuilders.utils.DayEnums;
 
 public interface IPicoPlaca {
 	
-	String verifyPicoPlaca(PicoPlaca picoPlaca, Schedule schedule, List<Schedule> rules);
+	List<PicoPlaca> generatePicoPlacaRules(DayEnums[] days, Schedule morningSchedule, Schedule noonSchedule);;
 	
-	List<LocalDateTime> generateNextAvailableDates(PicoPlaca picoPlaca);
+	String[] assignDigitsToDays(DayEnums day);
 	
 }

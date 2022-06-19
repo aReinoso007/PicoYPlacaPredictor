@@ -4,7 +4,6 @@ import java.util.Calendar;
 
 public class Schedule {
 	
-	private int id;
 	private Calendar startHour;
 	private Calendar endHour;
 	
@@ -12,19 +11,10 @@ public class Schedule {
 		super();
 	}
 
-	public Schedule(int id, Calendar startHour, Calendar endHour) {
+	public Schedule(Calendar startHour, Calendar endHour) {
 		super();
-		this.id = id;
 		this.startHour = startHour;
 		this.endHour = endHour;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public Calendar getStartHour() {

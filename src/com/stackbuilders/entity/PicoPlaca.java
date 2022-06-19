@@ -1,52 +1,62 @@
 package com.stackbuilders.entity;
 
-import java.time.LocalDateTime;
+import com.stackbuilders.utils.DayEnums;
 
 public class PicoPlaca {
 	
-	private String numberPlate;
-	private String fecha;
-	private String hora;
+	private int id;
+	private DayEnums day;
+	private Schedule morningSchedule;
+	private Schedule noonSchedule;
+	private String[] lastDigits;
 	
-	public PicoPlaca(String numberPlate, String fecha, String hora) {
+	public PicoPlaca(int id, DayEnums day, Schedule morningSchedule, Schedule noonSchedule, String[] lastDigits) {
 		super();
-		this.numberPlate = numberPlate;
-		this.fecha = fecha;
-		this.hora = hora;
+		this.id = id;
+		this.day = day;
+		this.morningSchedule = morningSchedule;
+		this.noonSchedule = noonSchedule;
+		this.lastDigits = lastDigits;
 	}
 
-	public String getNumberPlate() {
-		return numberPlate;
+	public int getId() {
+		return id;
 	}
 
-	public void setNumberPlate(String numberPlate) {
-		this.numberPlate = numberPlate;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getFecha() {
-		return fecha;
+	public DayEnums getDay() {
+		return day;
 	}
 
-	public void setFecha(String fecha) {
-		this.fecha = fecha;
+	public void setDay(DayEnums day) {
+		this.day = day;
 	}
 
-	public String getHora() {
-		return hora;
+	public Schedule getMorningSchedule() {
+		return morningSchedule;
 	}
 
-	public void setHora(String hora) {
-		this.hora = hora;
+	public void setMorningSchedule(Schedule morningSchedule) {
+		this.morningSchedule = morningSchedule;
 	}
 
+	public Schedule getNoonSchedule() {
+		return noonSchedule;
+	}
 
-	@Override
-	public String toString() {
-		return "Query [numberPlate=" + numberPlate + ", fecha=" + fecha + ", hora=" + hora + "]";
+	public void setNoonSchedule(Schedule noonSchedule) {
+		this.noonSchedule = noonSchedule;
+	}
+
+	public String[] getLastDigits() {
+		return lastDigits;
+	}
+
+	public void setLastDigits(String[] lastDigits) {
+		this.lastDigits = lastDigits;
 	}
 	
-	
-	
-	
-
 }
