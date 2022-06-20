@@ -31,6 +31,4 @@ public class Query {
 		return "Query [plateNumber=" + plateNumber + ", dateHour=" + dateHour + "]";
 	}
 	
-	
-	
 }

@@ -53,23 +53,23 @@ public class QueryService implements QueryDAO{
 		
 	}
 	
-	
-	private String getLastDigit(String plateNumber) {
+	@Override
+	public String getLastDigit(String plateNumber) {
 		if(validatePlateNumber(plateNumber)) {
 			return plateNumber.substring(6,7);
 		}else {
 			return null;
 		}
 	}
-
-
-	private Boolean validatePlateNumber(String plateNumber) {
+	
+	@Override
+	public Boolean validatePlateNumber(String plateNumber) {
 		
 		return (!isNumeric(plateNumber.substring(0, 3)) && plateNumber.length() < 8 ? true: false);
 	}
 	
-	
-	private boolean isNumeric(String subStr) {
+	@Override
+	public Boolean isNumeric(String subStr) {
 		if(subStr == null) {
 			return false;
 		}
@@ -81,8 +81,8 @@ public class QueryService implements QueryDAO{
 		return true;
 	}
 
-
-	private Boolean checkIfHourIsWithinRange(List<Schedule> schedules, String hourInput){
+	@Override
+	public Boolean checkIfHourIsWithinRange(List<Schedule> schedules, String hourInput){
 		Boolean status = false;
 		Double userHour = Double.parseDouble(hourInput);
 		for(int i=0; i< schedules.size(); i++) {
