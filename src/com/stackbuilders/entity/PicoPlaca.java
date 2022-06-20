@@ -9,9 +9,9 @@ public class PicoPlaca {
 	private DayEnums day;
 	private Schedule morningSchedule;
 	private Schedule noonSchedule;
-	private String[] lastDigits;
+	private String lastDigits;
 	
-	public PicoPlaca(DayEnums day, Schedule morningSchedule, Schedule noonSchedule, String[] lastDigits) {
+	public PicoPlaca(DayEnums day, Schedule morningSchedule, Schedule noonSchedule, String lastDigits) {
 		super();
 		this.day = day;
 		this.morningSchedule = morningSchedule;
@@ -44,11 +44,11 @@ public class PicoPlaca {
 		this.noonSchedule = noonSchedule;
 	}
 
-	public String[] getLastDigits() {
+	public String getLastDigits() {
 		return lastDigits;
 	}
 
-	public void setLastDigits(String[] lastDigits) {
+	public void setLastDigits(String lastDigits) {
 		this.lastDigits = lastDigits;
 	}
 
@@ -56,7 +56,7 @@ public class PicoPlaca {
 	@Override
 	public String toString() {
 		return "PicoPlaca [day=" + day + ", morningSchedule=" + morningSchedule + ", noonSchedule=" + noonSchedule
-				+ ", lastDigits=" + Arrays.toString(lastDigits) + "]";
+				+ ", lastDigits=" + lastDigits+ "]";
 	}
 	
 }

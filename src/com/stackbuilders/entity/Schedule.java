@@ -29,5 +29,4 @@ public class Schedule {
 		return "Schedule [startingHour=" + startingHour + ", endingHour=" + endingHour + "]";
 	}
 	
-	
 }

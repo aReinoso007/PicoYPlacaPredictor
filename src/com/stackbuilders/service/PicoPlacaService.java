@@ -18,11 +18,11 @@ public class PicoPlacaService implements PicoPlacaDAO{
 	public List<PicoPlaca> generatePicoPlacaRules() {
 		List<PicoPlaca> scheduledRules = new ArrayList<PicoPlaca>();
 		
-		scheduledRules.add(new PicoPlaca(DayEnums.MON, scheduleDAO.generateMorningHourRange(), scheduleDAO.generateNoonHourRange(), new String[]{"1","2"}));
-		scheduledRules.add(new PicoPlaca(DayEnums.TUE, scheduleDAO.generateMorningHourRange(), scheduleDAO.generateNoonHourRange(), new String[]{"3","4"}));
-		scheduledRules.add(new PicoPlaca(DayEnums.WED, scheduleDAO.generateMorningHourRange(), scheduleDAO.generateNoonHourRange(), new String[]{"6","6"}));
-		scheduledRules.add(new PicoPlaca(DayEnums.THU, scheduleDAO.generateMorningHourRange(), scheduleDAO.generateNoonHourRange(), new String[]{"7","8"}));
-		scheduledRules.add(new PicoPlaca(DayEnums.FRI, scheduleDAO.generateMorningHourRange(), scheduleDAO.generateNoonHourRange(), new String[]{"9","0"}));
+		scheduledRules.add(new PicoPlaca(DayEnums.MON, scheduleDAO.generateMorningHourRange(), scheduleDAO.generateNoonHourRange(), "12"));
+		scheduledRules.add(new PicoPlaca(DayEnums.TUE, scheduleDAO.generateMorningHourRange(), scheduleDAO.generateNoonHourRange(), "34"));
+		scheduledRules.add(new PicoPlaca(DayEnums.WED, scheduleDAO.generateMorningHourRange(), scheduleDAO.generateNoonHourRange(), "56"));
+		scheduledRules.add(new PicoPlaca(DayEnums.THU, scheduleDAO.generateMorningHourRange(), scheduleDAO.generateNoonHourRange(), "78"));
+		scheduledRules.add(new PicoPlaca(DayEnums.FRI, scheduleDAO.generateMorningHourRange(), scheduleDAO.generateNoonHourRange(), "90"));
 		
 		return scheduledRules;
 	}	
