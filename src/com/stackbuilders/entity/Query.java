@@ -1,34 +1,36 @@
 package com.stackbuilders.entity;
 
+import java.time.LocalDateTime;
+
 public class Query {
 	
 	private String plateNumber;
-	private String date;
-	private String hour;
+	private LocalDateTime dateHour;
 	
-	public Query(String plateNumber, String date, String hour) {
-		super();
-		this.plateNumber = plateNumber;
-		this.date = date;
-		this.hour = hour;
+	public Query() {
 	}
+
 	public String getPlateNumber() {
 		return plateNumber;
 	}
+
 	public void setPlateNumber(String plateNumber) {
 		this.plateNumber = plateNumber;
 	}
-	public String getDate() {
-		return date;
+
+	public LocalDateTime getDateHour() {
+		return dateHour;
 	}
-	public void setDate(String date) {
-		this.date = date;
+
+	public void setDateHour(LocalDateTime dateHour) {
+		this.dateHour = dateHour;
 	}
-	public String getHour() {
-		return hour;
+
+	@Override
+	public String toString() {
+		return "Query [plateNumber=" + plateNumber + ", dateHour=" + dateHour + "]";
 	}
-	public void setHour(String hour) {
-		this.hour = hour;
-	}
+	
+	
 	
 }

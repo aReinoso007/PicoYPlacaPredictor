@@ -1,5 +1,7 @@
 package com.stackbuilders.entity;
 
+import java.util.Arrays;
+
 import com.stackbuilders.utils.DayEnums;
 
 public class PicoPlaca {
@@ -48,6 +50,13 @@ public class PicoPlaca {
 
 	public void setLastDigits(String[] lastDigits) {
 		this.lastDigits = lastDigits;
+	}
+
+
+	@Override
+	public String toString() {
+		return "PicoPlaca [day=" + day + ", morningSchedule=" + morningSchedule + ", noonSchedule=" + noonSchedule
+				+ ", lastDigits=" + Arrays.toString(lastDigits) + "]";
 	}
 	
 }

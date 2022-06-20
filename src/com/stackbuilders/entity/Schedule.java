@@ -1,36 +1,33 @@
 package com.stackbuilders.entity;
 
-import java.util.Calendar;
+
 
 public class Schedule {
+		
+	private String startingHour;
+	private String endingHour;
 	
-	private Calendar startHour;
-	private Calendar endHour;
+	public Schedule(String startingHour, String endingHour) {
+		super();
+		this.startingHour = startingHour;
+		this.endingHour = endingHour;
+	}
+	public String getStartingHour() {
+		return startingHour;
+	}
+	public void setStartingHour(String startingHour) {
+		this.startingHour = startingHour;
+	}
+	public String getEndingHour() {
+		return endingHour;
+	}
+	public void setEndingHour(String endingHour) {
+		this.endingHour = endingHour;
+	}
+	@Override
+	public String toString() {
+		return "Schedule [startingHour=" + startingHour + ", endingHour=" + endingHour + "]";
+	}
 	
-	public Schedule() {
-		super();
-	}
-
-	public Schedule(Calendar startHour, Calendar endHour) {
-		super();
-		this.startHour = startHour;
-		this.endHour = endHour;
-	}
-
-	public Calendar getStartHour() {
-		return startHour;
-	}
-
-	public void setStartHour(Calendar startHour) {
-		this.startHour = startHour;
-	}
-
-	public Calendar getEndHour() {
-		return endHour;
-	}
-
-	public void setEndHour(Calendar endHour) {
-		this.endHour = endHour;
-	}
 	
 }
