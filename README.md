@@ -1,6 +1,5 @@
 # PicoPlacaPredictor
- This is a Pico y Placa Predictor built with JavaSE-11.
- The project used JUnit 5.
+ This is a Pico y Placa Predictor built with JavaSE-11 and JUnit 5 for unit testing.
  
  ## Problem to solve 🔍:
  
