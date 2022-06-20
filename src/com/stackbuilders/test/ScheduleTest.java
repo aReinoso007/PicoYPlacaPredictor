@@ -1,13 +1,10 @@
 package com.stackbuilders.test;
 
-import java.util.List;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import com.stackbuilders.dao.DAOFactory;
 import com.stackbuilders.dao.ScheduleDAO;
-import com.stackbuilders.entity.PicoPlaca;
 import com.stackbuilders.entity.Schedule;
 
 public class ScheduleTest {

@@ -26,4 +26,5 @@ public class PicoPlacaService implements PicoPlacaDAO{
 		
 		return scheduledRules;
 	}	
+	
 }

@@ -70,9 +70,7 @@ public class QueryService implements QueryDAO{
 	
 	@Override
 	public Boolean isNumeric(String subStr) {
-		if(subStr == null) {
-			return false;
-		}
+		if(subStr == null) 	return false;
 		try {
 			Double.parseDouble(subStr);
 		}catch (NumberFormatException e) {
@@ -95,6 +93,5 @@ public class QueryService implements QueryDAO{
 		}
 		return status;
 	}
-	
 
 }
