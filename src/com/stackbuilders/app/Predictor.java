@@ -19,6 +19,7 @@ public class Predictor {
 	public void checkifPicoYPlacaApllies() {
 		QueryDAO queryDAO = DAOFactory.getFactory().getQueryDAO();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
+		String date = "", hour = "";
 		Query query = new Query();
 		try {
 		@SuppressWarnings("resource")
@@ -26,8 +27,11 @@ public class Predictor {
 		System.out.println("***Pico y Placa Predictor***");
 		System.out.println("Please enter your plate number: ");
 		query.setPlateNumber(userInput.nextLine());
-		System.out.println("Please enter a date and hour in the following format dd-mm-yyyy HH:mm, Example: 20-06-2022 08:14");
-		LocalDateTime dateTime = LocalDateTime.parse(userInput.nextLine(), formatter);
+		System.out.println("Please enter a date in the following format dd-mm-yyyy, Example: 20-06-2022");
+		date = userInput.nextLine();
+		System.out.println("Please enter a hour in the following format HH:mm, Example: 08:14");
+		hour = userInput.nextLine();
+		LocalDateTime dateTime = LocalDateTime.parse(date+" "+hour, formatter);
 		query.setDateHour(dateTime);
 		System.out.println(queryDAO.checkPicoYPlaca(query));
 		checkifPicoYPlacaApllies();
