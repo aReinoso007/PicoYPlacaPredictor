@@ -7,7 +7,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 import com.stackbuilders.dao.DAOFactory;
-import com.stackbuilders.dao.PicoPlacaDAO;
 import com.stackbuilders.dao.QueryDAO;
 import com.stackbuilders.entity.Query;
 
@@ -41,7 +40,6 @@ public class Predictor {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		PicoPlacaDAO picoPlacaDAO = DAOFactory.getFactory().getPicoPlacaDAO();
 		
 		Predictor pr = new Predictor();
 		
