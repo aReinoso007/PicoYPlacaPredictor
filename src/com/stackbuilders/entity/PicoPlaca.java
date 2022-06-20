@@ -1,7 +1,5 @@
 package com.stackbuilders.entity;
 
-import java.util.Arrays;
-
 import com.stackbuilders.utils.DayEnums;
 
 public class PicoPlaca {

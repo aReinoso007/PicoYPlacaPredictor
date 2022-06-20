@@ -18,7 +18,7 @@ public class QueryService implements QueryDAO{
 	@Override
 	public String checkPicoYPlaca(Query query) {
 		String result = "The vehicle with the following plates: "
-						+query.getPlateNumber()+
+						+query.getPlateNumber().toUpperCase()+
 						" cannot be driven on the following date: "
 						+query.getDateHour();
 		
@@ -42,7 +42,7 @@ public class QueryService implements QueryDAO{
 					if(checkIfHourIsWithinRange(schedules, userHour)) {
 						
 						result = 	"The vehicle with the following plates: "
-									+query.getPlateNumber()+
+									+query.getPlateNumber().toUpperCase()+
 									" can be driven on the following date: "
 									+query.getDateHour();
 					}
@@ -84,10 +84,10 @@ public class QueryService implements QueryDAO{
 		Boolean status = false;
 		Double userHour = Double.parseDouble(hourInput);
 		for(int i=0; i< schedules.size(); i++) {
-			Double start = Double.parseDouble(schedules.get(i).getStartingHour().replace(":", "."));
-			Double end = Double.parseDouble(schedules.get(i).getEndingHour().replace(":", "."));
-			System.out.println("s: "+start+" end: "+end+" input: "+userHour);
-			if( userHour >= start && userHour <= end) {
+			Double startingHour = Double.parseDouble(schedules.get(i).getStartingHour().replace(":", "."));
+			Double endingHour = Double.parseDouble(schedules.get(i).getEndingHour().replace(":", "."));
+			System.out.println("s: "+startingHour+" end: "+endingHour+" input: "+userHour);
+			if( userHour >= startingHour && userHour <= endingHour) {
 				status = true;
 			}
 		}
