@@ -16,5 +16,5 @@ public class ScheduleService implements ScheduleDAO{
 	public Schedule generateNoonHourRange() {
 		return new Schedule("16:00", "19:30");
 	}
-
+	
 }
