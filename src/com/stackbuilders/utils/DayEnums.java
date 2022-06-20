@@ -4,11 +4,11 @@ import java.util.Calendar;
 
 public enum DayEnums {
 	
-	MON(Calendar.MONDAY, "Monday"),
-	TUE(Calendar.TUESDAY, "Tuesday"),
-	WED(Calendar.WEDNESDAY, "Wednesday"),
-	THU(Calendar.THURSDAY, "Thursday"),
-	FRI(Calendar.FRIDAY, "Friday");
+	MON(Calendar.MONDAY, "MONDAY"),
+	TUE(Calendar.TUESDAY, "TUESDAY"),
+	WED(Calendar.WEDNESDAY, "WEDNESDAY"),
+	THU(Calendar.THURSDAY, "THURSDAY"),
+	FRI(Calendar.FRIDAY, "FRIDAY");
 	
 	private int dayNumber;
 	private String dayName;

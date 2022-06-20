@@ -16,8 +16,7 @@ import com.stackbuilders.entity.PicoPlaca;
 import com.stackbuilders.entity.Query;
 
 public class Predictor {
-	
-		
+			
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -28,7 +27,8 @@ public class Predictor {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 		
 		List<PicoPlaca> rules = picoPlacaDAO.generatePicoPlacaRules();
-				
+		
+		Predictor pr = new Predictor();
 		
 		Query query = new Query();
 	
@@ -39,10 +39,7 @@ public class Predictor {
 		System.out.println("	Please enter a date and hour in the following format dd-mm-yyyy HH:mm, Example: 20-06-2022 08:14");
 		LocalDateTime dateTime = LocalDateTime.parse(userInput.nextLine(), formatter);
 		query.setDateHour(dateTime);
-		System.out.println(query.toString());
-		
-		
-		
+		System.out.println(queryDAO.checkPicoYPlaca(query));		
 		
 	}
 	

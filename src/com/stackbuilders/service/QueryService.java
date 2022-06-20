@@ -15,10 +15,22 @@ public class QueryService implements QueryDAO{
 
 	@Override
 	public String checkPicoYPlaca(Query query) {
-		
+		String result = "The vehicle with the following plates: "+query.getPlateNumber()+
+				" cannot be driven on the following date: "+query.getDateHour();
 		List<PicoPlaca> scheduledRules = picoDAO.generatePicoPlacaRules();
+		String dayOfQuery = query.getDateHour().getDayOfWeek().toString();
+		for(int i=0; i < scheduledRules.size(); i++) {
+			if(dayOfQuery == scheduledRules.get(i).getDay().getDayName()) {
+				System.out.println(getLastDigit(query.getPlateNumber()));
+				if(scheduledRules.get(i).getLastDigits().toString().contains(getLastDigit(query.getPlateNumber()))) {
+					System.out.println("Hay match: "+query.getDateHour().getDayOfWeek()+" = "+scheduledRules.get(i).getDay().toString());
+					result = "The vehicle with the following plates: "+query.getPlateNumber()+
+							" can be driven on the following date: "+query.getDateHour();
+				}
+			}
+		}
+		return result;
 		
-		return null;
 	}
 	
 	
